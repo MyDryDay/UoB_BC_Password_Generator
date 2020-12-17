@@ -74,4 +74,12 @@ function generatePass(lower, upper, num, spclC, length) {
     // the id of password
     document.querySelector("#password").value = finalPassword;
   } 
+
+  // This if statement calls back to promptUser if they declared a number <length or >length
+  // Also displays a message telling the user to enter a number between 8 and 128
+  if(length < 8 || length > 128) {
+    alert("Please enter a number from 8 - 128.");
+    promptUser();
+  }
+  
 }
