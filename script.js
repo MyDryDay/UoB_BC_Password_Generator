@@ -16,3 +16,9 @@ function promptUser() {
 // Makes it quicker to target the element
 
 var generateBtn = document.querySelector("#generate");
+
+
+// Add event listener to generate button
+// Upon clicking the promptUser function will be called
+
+generateBtn.addEventListener("click", promptUser);
