@@ -10,3 +10,9 @@ function promptUser() {
 
   generatePass(lower, upper, num, sym, length);
 }
+
+
+// Assigns generateBtn variable to an HTML object
+// Makes it quicker to target the element
+
+var generateBtn = document.querySelector("#generate");
