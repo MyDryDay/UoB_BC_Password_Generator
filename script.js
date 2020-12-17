@@ -22,3 +22,13 @@ var generateBtn = document.querySelector("#generate");
 // Upon clicking the promptUser function will be called
 
 generateBtn.addEventListener("click", promptUser);
+
+
+// Create object with password characters in it
+
+const passwordChars = {
+  lowercase: "abcdefghijklmnopqrstuvwxyz",
+  uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  numbers: "0123456789",
+  symbols: "£$%^&*<>@+=(){}[]"
+};
