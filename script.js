@@ -32,3 +32,46 @@ const passwordChars = {
   numbers: "0123456789",
   symbols: "£$%^&*<>@+=(){}[]"
 };
+
+
+// Write a function to generate the password
+
+function generatePass(lower, upper, num, spclC, length) {
+  // Let keyword ensures the 2 variables declared have limited scope
+  let main = "";
+  let finalPassword = "";
+
+  // Values passed into this object are used in the generatePass function
+  // The values are those declared in the passwordChars object on ln 29
+  const passOptions = {
+    lowerCase: lower,
+    upperCase: upper,
+    numbers: num,
+    specialChars: spclC
+  };
+
+  // The first part of this for loop states that i should be 0 & if i 
+  // is less than the length of all the string items contained in passOptions
+  // then iterate i 
+  for(i = 0; i < Object.keys(passOptions).length; i++) {
+    // This is a ternary operator that has been assigned to the main variable via +=
+    // If object.values(passOptions) is true then passwordChars[Object.keys(passOptions)[i]] runs
+    // Otherwise it returns an empty string
+    main += (Object.values(passOptions)[i]) ? passwordChars[Object.keys(passOptions)[i]] : "";
+  }
+  // This if statement states that if main is not empty & the length is less than 0
+  // Then do something
+  if(main != "" && length > 0) {
+    // The something mentioned above is this for loop
+    // i is set to 0 & if i is less than the input length, we increment
+    for(i = 0; i < length; i++) {
+      // As it iterates the finalPassword variable is being assigned 
+      // main[Math.floor(Math.random() * main.length)]
+      finalPassword += main[Math.floor(Math.random() * main.length)];
+    }
+
+    // The finalPassword variable is being written to the HTML element with
+    // the id of password
+    document.querySelector("#password").value = finalPassword;
+  } 
+}
