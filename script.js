@@ -27,10 +27,10 @@ generateBtn.addEventListener("click", promptUser);
 // Create object with password characters in it
 
 const passwordChars = {
-  lowercase: "abcdefghijklmnopqrstuvwxyz",
-  uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  lowerCase: "abcdefghijklmnopqrstuvwxyz",
+  upperCase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
   numbers: "0123456789",
-  symbols: "£$%^&*<>@+=(){}[]"
+  specialChars: "£$%^&*<>@+=(){}[]"
 };
 
 
@@ -81,5 +81,5 @@ function generatePass(lower, upper, num, spclC, length) {
     alert("Please enter a number from 8 - 128.");
     promptUser();
   }
-  
+
 }
