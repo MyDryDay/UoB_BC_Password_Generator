@@ -1,3 +1,14 @@
+// function checkLength() {
+//   var length = prompt("How long would you like your password to be? Between 8 and 128 characters.");
+//   if(length < 8 || length > 128) {
+//     alert("Please select a password length between 8 and 128 characters.");
+//     checkLength();
+//   } else {
+//     promptUser();
+//   }
+// }
+
+
 // User prompts to gather info on what kind of password they'd like
 // Calls the generatePass function at the end
 
@@ -26,7 +37,7 @@ generateBtn.addEventListener("click", promptUser);
 
 // Create object with password characters in it
 
-const passwordChars = {
+var passwordChars = {
   lowerCase: "abcdefghijklmnopqrstuvwxyz",
   upperCase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
   numbers: "0123456789",
@@ -43,7 +54,7 @@ function generatePass(lower, upper, num, spclC, length) {
 
   // Values passed into this object are used in the generatePass function
   // The values are those declared in the passwordChars object on ln 29
-  const passOptions = {
+  var passOptions = {
     lowerCase: lower,
     upperCase: upper,
     numbers: num,
