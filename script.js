@@ -60,13 +60,14 @@ function generatePass(lower, upper, num, spclC, length) {
       availableSets.push(passwordChars[Object.keys(passOptions)[i]]);
     }
   }
+  console.log(availableSets);
 
 
   if(availableSets != [] && length > 0) {
     for(i = 0; i < length; i++) {
-      var characters = Object.values(availableSets)[i];
+      var characters = Object.values(availableSets);
       console.log(characters);
-      finalPassword += characters[Math.floor(Math.random() * )];
+      // finalPassword += characters[Math.floor(Math.random() * )];
       // console.log(Object.values(availableSets)[i]);
       // finalPassword += Object.values(availableSets[Math.floor(Math.random() * length)]);
       // finalPassword += availableSets[Math.floor(Math.random() * availableSets.length)];
